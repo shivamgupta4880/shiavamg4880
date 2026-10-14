@@ -62,9 +62,9 @@
     <rect x="64" y="168" width="120" height="5" rx="2.5" fill="url(#accent)"/>
     <text x="64" y="212" fill="#cbd5e1" font-size="24" font-weight="500">Founder  ·  Full-Stack Developer  ·  AI Solutions</text>
   </g>
-  <g class="mono" font-size="17" fill="#94a3b8">
-    <text x="64" y="268"><tspan fill="#22d3ee">↗</tspan> shivamguptadev.me</text>
-    <text x="330" y="268"><tspan fill="#a78bfa">✆</tspan> +91 75709 50739</text>
-    <text x="580" y="268"><tspan fill="#22d3ee">✉</tspan> shivamgupt4880@gmail.com</text>
+  <g class="mono" font-size="16" fill="#94a3b8">
+    <text x="64" y="268"><tspan fill="#22d3ee">Website:</tspan> shivamguptadev.me</text>
+    <text x="370" y="268"><tspan fill="#a78bfa">✆</tspan> +91 75709 50739</text>
+    <text x="570" y="268"><tspan fill="#22d3ee">✉</tspan> shivamgupt4880@gmail.com</text>
   </g>
 </svg>
