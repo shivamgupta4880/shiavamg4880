@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>S&amp;S Status 3D</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1080px; height: 1920px; overflow: hidden;
+    font-family: 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    background: radial-gradient(ellipse at 80% 8%, #3b2f7a 0%, transparent 45%),
+                radial-gradient(ellipse at 10% 95%, #0e5a6e 0%, transparent 45%),
+                linear-gradient(160deg, #070b18 0%, #0f1736 55%, #0b2440 100%);
+    color: #fff; position: relative;
+  }
+  /* 3D perspective floor grid */
+  .floor {
+    position: absolute; left: -540px; right: -540px; bottom: -200px; height: 900px;
+    background-image:
+      linear-gradient(rgba(34,211,238,.35) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(167,139,250,.35) 2px, transparent 2px);
+    background-size: 90px 90px;
+    transform: perspective(700px) rotateX(68deg);
+    transform-origin: bottom center;
+    -webkit-mask-image: linear-gradient(to top, #000 10%, transparent 85%);
+  }
+  .wrap { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; padding-top: 120px; }
+
+  /* glossy 3D sphere logo */
+  .sphere {
+    width: 300px; height: 300px; border-radius: 50%;
+    background: radial-gradient(circle at 32% 28%, #ffffff 0%, #a5f3fc 8%, #22d3ee 28%, #6d5bd0 62%, #1e1b4b 100%);
+    box-shadow: 0 40px 80px rgba(34,211,238,.35), inset -30px -40px 70px rgba(10,10,40,.65), inset 18px 18px 40px rgba(255,255,255,.25);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;
+  }
+  .sphere::after { /* ring */
+    content: ""; position: absolute; width: 440px; height: 120px; border-radius: 50%;
+    border: 6px solid rgba(167,139,250,.75); transform: translateY(95px) rotate(-10deg);
+    box-shadow: 0 0 24px rgba(167,139,250,.6);
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  }
+  .sphere .ss {
+    font-size: 86px; font-weight: 900; letter-spacing: 2px;
+    text-shadow: 0 1px 0 #c7d2fe, 0 2px 0 #a5b4fc, 0 3px 0 #818cf8, 0 4px 0 #6366f1, 0 5px 0 #4f46e5, 0 6px 0 #4338ca, 0 14px 18px rgba(0,0,0,.55);
+  }
+  .sphere .ga { font-size: 20px; font-weight: 800; letter-spacing: 6px; color: #0b1020; margin-top: 4px; }
+  .shadow { width: 240px; height: 34px; border-radius: 50%; background: radial-gradient(rgba(0,0,0,.6), transparent 70%); margin-top: 60px; }
+
+  .brand { margin-top: 36px; font-size: 30px; font-weight: 700; letter-spacing: 8px; color: #22d3ee; text-shadow: 0 0 18px rgba(34,211,238,.6); }
+
+  /* extruded 3D headline */
+  .h3d {
+    margin-top: 26px; text-align: center; font-size: 92px; line-height: 1.08; font-weight: 900; color: #ffffff;
+    text-shadow:
+      0 1px 0 #dbeafe, 0 2px 0 #bfdbfe, 0 3px 0 #93c5fd, 0 4px 0 #60a5fa,
+      0 5px 0 #3b82f6, 0 6px 0 #2563eb, 0 7px 0 #1d4ed8, 0 8px 0 #1e40af,
+      0 9px 0 #1e3a8a, 0 10px 0 #172554, 0 22px 30px rgba(0,0,0,.6);
+  }
+  .h3d .ai {
+    color: #67e8f9;
+    text-shadow:
+      0 1px 0 #22d3ee, 0 2px 0 #06b6d4, 0 3px 0 #0891b2, 0 4px 0 #0e7490,
+      0 5px 0 #155e75, 0 6px 0 #164e63, 0 7px 0 #7c3aed, 0 8px 0 #6d28d9,
+      0 9px 0 #5b21b6, 0 10px 0 #4c1d95, 0 22px 30px rgba(0,0,0,.6), 0 0 40px rgba(103,232,249,.5);
+  }
+  .sub { margin-top: 34px; font-size: 34px; color: #cbd5e1; text-align: center; line-height: 1.4; }
+
+  /* 3D tilted cards */
+  .cards { margin-top: 56px; perspective: 1400px; display: flex; flex-direction: column; gap: 30px; }
+  .card {
+    width: 880px; height: 132px; border-radius: 26px; padding: 0 40px;
+    display: flex; align-items: center; gap: 32px;
+    background: linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.04));
+    border: 2px solid rgba(255,255,255,.18);
+    transform: rotateX(14deg) rotateY(-8deg);
+    box-shadow: 0 10px 0 rgba(15,23,54,.95), 0 12px 0 rgba(34,211,238,.35), 0 34px 50px rgba(0,0,0,.55);
+  }
+  .card:nth-child(2) { transform: rotateX(14deg) rotateY(0deg); box-shadow: 0 10px 0 rgba(15,23,54,.95), 0 12px 0 rgba(125,211,252,.35), 0 34px 50px rgba(0,0,0,.55); }
+  .card:nth-child(3) { transform: rotateX(14deg) rotateY(8deg); box-shadow: 0 10px 0 rgba(15,23,54,.95), 0 12px 0 rgba(167,139,250,.4), 0 34px 50px rgba(0,0,0,.55); }
+  .orb { width: 70px; height: 70px; border-radius: 50%; flex: none; font-size: 36px; display: flex; align-items: center; justify-content: center;
+    box-shadow: inset -10px -12px 18px rgba(0,0,0,.45), inset 6px 6px 12px rgba(255,255,255,.5), 0 10px 20px rgba(0,0,0,.4); }
+  .o1 { background: radial-gradient(circle at 30% 30%, #cffafe, #22d3ee 45%, #0e7490); }
+  .o2 { background: radial-gradient(circle at 30% 30%, #e0f2fe, #7dd3fc 45%, #0369a1); }
+  .o3 { background: radial-gradient(circle at 30% 30%, #ede9fe, #a78bfa 45%, #5b21b6); }
+  .card b { display: block; font-size: 40px; font-weight: 800; }
+  .card span { display: block; font-size: 27px; color: #a5b4cf; margin-top: 4px; }
+
+  /* raised 3D button */
+  .btn {
+    margin-top: 76px; width: 760px; height: 108px; border-radius: 54px;
+    background: linear-gradient(90deg, #22d3ee, #a78bfa);
+    color: #0b1020; font-size: 42px; font-weight: 900; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 12px 0 #4c3a9e, 0 14px 0 #2e2466, 0 36px 50px rgba(0,0,0,.6), inset 0 6px 10px rgba(255,255,255,.5);
+  }
+  .contact { margin-top: 56px; text-align: center; font-size: 38px; font-weight: 700; line-height: 1.55;
+    text-shadow: 0 3px 0 #1e3a8a, 0 8px 14px rgba(0,0,0,.6); }
+  .contact .l { color: #a78bfa; }
+  .contact .w { color: #22d3ee; }
+</style>
+</head>
+<body>
+  <div class="floor"></div>
+  <div class="wrap">
+    <div class="sphere"><div class="ss">S&amp;S</div><div class="ga">GLOBAL AI</div></div>
+    <div class="shadow"></div>
+    <div class="brand">S&amp;S GLOBAL AI SOLUTIONS</div>
+    <div class="h3d">Grow Your Business<br>with <span class="ai">AI</span></div>
+    <div class="sub">Smart, affordable technology that<br>saves time and brings more customers.</div>
+    <div class="cards">
+      <div class="card"><div class="orb o1">🤖</div><div><b>AI Chatbots</b><span>24/7 web &amp; WhatsApp support</span></div></div>
+      <div class="card"><div class="orb o2">💻</div><div><b>Websites &amp; Apps</b><span>Fast, modern, mobile-ready</span></div></div>
+      <div class="card"><div class="orb o3">⚙️</div><div><b>Automation</b><span>Cut manual work, save cost</span></div></div>
+    </div>
+    <div class="btn">Get a Free Consultation</div>
+    <div class="contact">
+      <div><span class="l">Call:</span> +91 75709 50739</div>
+      <div><span class="l">Call:</span> +91 96851 47050</div>
+      <div><span class="w">Website:</span> shivamguptadev.me</div>
+    </div>
+  </div>
+</body>
+</html>
