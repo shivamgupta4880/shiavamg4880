@@ -1,4 +1,7 @@
-# shiavamg4880
+<p align="center">
+  <a href="https://shivamguptadev.me/"><img src="./banner.svg" alt="Shivam Gupta — Founder, S&amp;S Global AI Solutions" width="100%"/></a>
+</p>
+
 <h1 align="center">Hi 👋, I'm Shivam Gupta</h1>
 <h3 align="center">
 Full-Stack Developer | MERN Stack | Java | DevOps Enthusiast
