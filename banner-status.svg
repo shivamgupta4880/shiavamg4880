@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-label="S&amp;S Global AI Solutions — AI-powered solutions for your business">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="55%" stop-color="#111a3a"/>
+      <stop offset="100%" stop-color="#0e2a47"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <style>
+      .sans { font-family: 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
+    </style>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+  <rect width="1080" height="1920" fill="url(#grid)"/>
+  <circle cx="900" cy="200" r="420" fill="url(#glow2)"/>
+  <circle cx="150" cy="1750" r="420" fill="url(#glow1)"/>
+
+  <!-- emblem -->
+  <g transform="translate(540 330)">
+    <circle r="150" fill="none" stroke="url(#accent)" stroke-width="3" stroke-opacity="0.7"/>
+    <circle r="115" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+    <text class="sans" y="22" text-anchor="middle" fill="#ffffff" font-size="72" font-weight="800">S&amp;S</text>
+    <text class="sans" y="70" text-anchor="middle" fill="#7dd3fc" font-size="20" font-weight="600" letter-spacing="5">GLOBAL AI</text>
+  </g>
+
+  <!-- headline -->
+  <g class="sans" text-anchor="middle">
+    <text x="540" y="580" fill="#22d3ee" font-size="28" font-weight="600" letter-spacing="7">S&amp;S GLOBAL AI SOLUTIONS</text>
+    <text x="540" y="700" fill="#ffffff" font-size="88" font-weight="800">Grow Your Business</text>
+    <text x="540" y="800" fill="#ffffff" font-size="88" font-weight="800">with <tspan fill="#7dd3fc">AI</tspan></text>
+    <rect x="460" y="836" width="160" height="7" rx="3.5" fill="url(#accent)"/>
+    <text x="540" y="910" fill="#cbd5e1" font-size="34" font-weight="500">Smart, affordable technology that</text>
+    <text x="540" y="956" fill="#cbd5e1" font-size="34" font-weight="500">saves time and brings more customers.</text>
+  </g>
+
+  <!-- service cards -->
+  <g class="sans">
+    <g transform="translate(90 1020)">
+      <rect width="900" height="130" rx="22" fill="#ffffff" fill-opacity="0.06" stroke="#22d3ee" stroke-opacity="0.4" stroke-width="2"/>
+      <circle cx="60" cy="65" r="16" fill="#22d3ee"/>
+      <text x="105" y="56" fill="#ffffff" font-size="38" font-weight="700">AI Chatbots</text>
+      <text x="105" y="98" fill="#94a3b8" font-size="27">24/7 web &amp; WhatsApp support</text>
+    </g>
+    <g transform="translate(90 1170)">
+      <rect width="900" height="130" rx="22" fill="#ffffff" fill-opacity="0.06" stroke="#7dd3fc" stroke-opacity="0.4" stroke-width="2"/>
+      <circle cx="60" cy="65" r="16" fill="#7dd3fc"/>
+      <text x="105" y="56" fill="#ffffff" font-size="38" font-weight="700">Websites &amp; Apps</text>
+      <text x="105" y="98" fill="#94a3b8" font-size="27">Fast, modern, mobile-ready</text>
+    </g>
+    <g transform="translate(90 1320)">
+      <rect width="900" height="130" rx="22" fill="#ffffff" fill-opacity="0.06" stroke="#a78bfa" stroke-opacity="0.4" stroke-width="2"/>
+      <circle cx="60" cy="65" r="16" fill="#a78bfa"/>
+      <text x="105" y="56" fill="#ffffff" font-size="38" font-weight="700">Automation</text>
+      <text x="105" y="98" fill="#94a3b8" font-size="27">Cut manual work, save cost</text>
+    </g>
+  </g>
+
+  <!-- CTA -->
+  <g class="sans">
+    <rect x="190" y="1510" width="700" height="100" rx="50" fill="url(#accent)"/>
+    <text x="540" y="1576" text-anchor="middle" fill="#0b1020" font-size="40" font-weight="800">Get a Free Consultation</text>
+  </g>
+
+  <!-- contact -->
+  <g class="mono" font-size="34" fill="#e2e8f0" text-anchor="middle">
+    <text x="540" y="1690"><tspan fill="#a78bfa">Call:</tspan> +91 75709 50739</text>
+    <text x="540" y="1745"><tspan fill="#a78bfa">Call:</tspan> +91 96851 47050</text>
+    <text x="540" y="1820"><tspan fill="#22d3ee">Website:</tspan> shivamguptadev.me</text>
+  </g>
+</svg>
