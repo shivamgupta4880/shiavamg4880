@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Shivam Gupta Profile</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: linear-gradient(180deg, #fff3c4 0%, #f5d27a 28%, #c9962e 55%, #f7dc8c 78%, #a8761f 100%);
+    --gold-h: linear-gradient(90deg, #a8761f, #f5d27a 30%, #fff3c4 50%, #f5d27a 70%, #a8761f);
+  }
+  body {
+    width: 1080px; height: 1920px; overflow: hidden; position: relative;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif; color: #f4ecd8;
+    background:
+      radial-gradient(ellipse 70% 40% at 50% 12%, rgba(212,163,61,.22), transparent 70%),
+      radial-gradient(ellipse 60% 35% at 50% 100%, rgba(212,163,61,.16), transparent 70%),
+      linear-gradient(180deg, #0c0a07 0%, #14110b 45%, #0a0907 100%);
+  }
+  /* fine diagonal texture */
+  body::before {
+    content: ""; position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg, rgba(255,215,130,.025) 0 2px, transparent 2px 14px);
+  }
+  /* double gold frame */
+  .frame { position: absolute; inset: 36px; border: 2px solid rgba(214,170,80,.55); border-radius: 28px; }
+  .frame::after { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(214,170,80,.25); border-radius: 20px; }
+  .corner { position: absolute; width: 70px; height: 70px; border-color: #e3b65a; border-style: solid; }
+  .c1 { top: 22px; left: 22px; border-width: 5px 0 0 5px; border-radius: 30px 0 0 0; }
+  .c2 { top: 22px; right: 22px; border-width: 5px 5px 0 0; border-radius: 0 30px 0 0; }
+  .c3 { bottom: 22px; left: 22px; border-width: 0 0 5px 5px; border-radius: 0 0 0 30px; }
+  .c4 { bottom: 22px; right: 22px; border-width: 0 5px 5px 0; border-radius: 0 0 30px 0; }
+
+  .wrap { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; padding-top: 140px; }
+
+  .gold-text { background: var(--gold); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  /* monogram medallion */
+  .medal {
+    width: 260px; height: 260px; border-radius: 50%; position: relative;
+    background: conic-gradient(from 200deg, #8a5d16, #f7dc8c, #b8862b, #fff3c4, #a8761f, #f5d27a, #8a5d16);
+    box-shadow: 0 30px 70px rgba(0,0,0,.7), 0 0 80px rgba(230,180,80,.25);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .medal-in {
+    width: 224px; height: 224px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #2a2318, #0d0b08 70%);
+    box-shadow: inset 0 6px 16px rgba(0,0,0,.8), inset 0 -2px 6px rgba(255,220,140,.15);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .medal .ss { font-family: 'Caladea', 'Liberation Serif', serif; font-size: 92px; font-weight: 700; line-height: 1; filter: drop-shadow(0 4px 6px rgba(0,0,0,.6)); }
+  .medal .ga { font-size: 15px; font-weight: 600; letter-spacing: 6px; color: #d6b46a; margin-top: 10px; }
+
+  .brand { margin-top: 56px; font-size: 26px; font-weight: 600; letter-spacing: 12px; color: #d9b768; }
+  .divider { display: flex; align-items: center; gap: 18px; margin-top: 26px; }
+  .divider i { display: block; width: 150px; height: 2px; background: var(--gold-h); }
+  .divider b { width: 14px; height: 14px; transform: rotate(45deg); background: var(--gold); }
+
+  .h1 {
+    margin-top: 40px; text-align: center; font-family: 'Caladea', 'Liberation Serif', serif;
+    font-size: 100px; line-height: 1.05; font-weight: 700;
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,.7));
+  }
+  .h1 em { font-style: italic; }
+  .sub { margin-top: 32px; font-size: 32px; font-weight: 300; color: #d8ccb0; text-align: center; line-height: 1.5; letter-spacing: .5px; }
+
+  /* service rows */
+  .services { margin-top: 50px; display: flex; flex-direction: column; gap: 26px; }
+  .svc {
+    width: 860px; height: 128px; border-radius: 20px; padding: 0 38px;
+    display: flex; align-items: center; gap: 32px;
+    background: linear-gradient(135deg, rgba(255,230,170,.09), rgba(255,230,170,.02));
+    border: 1.5px solid rgba(214,170,80,.45);
+    box-shadow: 0 18px 40px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,235,180,.15);
+  }
+  .ic {
+    width: 76px; height: 76px; flex: none; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #2b2419, #0e0c09);
+    border: 2px solid #d6aa50; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 22px rgba(214,170,80,.3);
+  }
+  .ic svg { width: 40px; height: 40px; stroke: #f0cf7e; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .svc b { display: block; font-size: 38px; font-weight: 700; color: #fbf3df; }
+  .svc span { display: block; font-size: 26px; color: #b9a988; margin-top: 4px; font-weight: 400; }
+
+  .btn {
+    margin-top: 76px; width: 740px; height: 106px; border-radius: 53px;
+    background: linear-gradient(180deg, #fbe7a8 0%, #e2b452 45%, #b8862b 100%);
+    color: #1a1308; font-size: 38px; font-weight: 800; letter-spacing: 1px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 10px 0 #6e4c12, 0 30px 50px rgba(0,0,0,.65), inset 0 3px 6px rgba(255,255,255,.6), 0 0 60px rgba(226,180,82,.35);
+  }
+
+  .contact { margin-top: 62px; text-align: center; }
+  .contact .row { font-size: 38px; font-weight: 600; color: #fbf3df; line-height: 1.6; letter-spacing: .5px; }
+  .contact .row small { font-size: 24px; letter-spacing: 4px; color: #d6b46a; font-weight: 600; margin-right: 14px; vertical-align: 4px; }
+</style><style>
+  .medal .ss { font-size: 100px; }
+  .name { margin-top: 50px; font-family: 'Caladea','Liberation Serif',serif; font-size: 112px; font-weight: 700; line-height: 1; filter: drop-shadow(0 6px 10px rgba(0,0,0,.7)); }
+  .role { margin-top: 26px; font-size: 30px; font-weight: 600; letter-spacing: 6px; color: #d9b768; text-align:center; }
+  .tag { margin-top: 30px; font-size: 32px; font-weight: 300; color: #e6dcc3; text-align: center; line-height: 1.5; font-style: italic; font-family: 'Caladea','Liberation Serif',serif; }
+  .chips { margin-top: 38px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; width: 880px; }
+  .chip { padding: 12px 26px; border-radius: 40px; border: 1.5px solid rgba(214,170,80,.6); font-size: 26px; font-weight: 600; color: #f3e3b8; background: rgba(255,230,170,.06); }
+  .svc { height: 116px; }
+  .contact { margin-top: 50px; }
+</style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner c1"></div><div class="corner c2"></div><div class="corner c3"></div><div class="corner c4"></div>
+  <div class="wrap" style="padding-top:120px">
+    <div class="medal"><div class="medal-in"><div class="ss gold-text">SG</div><div class="ga">FOUNDER</div></div></div>
+    <div class="name gold-text">Shivam Gupta</div>
+    <div class="role">FOUNDER · S&amp;S GLOBAL AI SOLUTIONS</div>
+    <div class="divider"><i></i><b></b><i></i></div>
+    <div class="tag">&ldquo;Building smart AI &amp; web solutions<br>that help businesses grow.&rdquo;</div>
+    <div class="chips">
+      <div class="chip">Full-Stack Developer</div><div class="chip">MERN Stack</div><div class="chip">Java</div>
+      <div class="chip">AI Solutions</div><div class="chip">DevOps</div>
+    </div>
+    <div class="services">
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
+        <div><b>B.Tech CSE</b><span>Lovely Professional University</span></div>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M8 8l-2 2 2 2M16 8l2 2-2 2"/></svg></div>
+        <div><b>Real-World Projects</b><span>CompileHub · Trust Chain · Sudoku Solver</span></div>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.5 7L12 17.5 5.7 21l1.5-7L2 9.3l7-.8z"/></svg></div>
+        <div><b>200+ DSA Problems</b><span>LeetCode · GFG · HackerRank</span></div>
+      </div>
+    </div>
+    <div class="btn" style="margin-top:64px">LET'S BUILD TOGETHER</div>
+    <div class="contact">
+      <div class="row"><small>CALL</small>+91 75709 50739</div>
+      <div class="row"><small>CALL</small>+91 96851 47050</div>
+      <div class="row"><small>WEB</small>shivamguptadev.me</div>
+    </div>
+  </div>
+</body>
+</html>
