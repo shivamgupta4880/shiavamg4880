@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="S&amp;S Global AI Solutions — AI-powered solutions for your business">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="55%" stop-color="#111a3a"/>
+      <stop offset="100%" stop-color="#0e2a47"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <style>
+      .sans { font-family: 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
+      @keyframes pulse { 0%,100% { opacity: .4 } 50% { opacity: 1 } }
+      .node { animation: pulse 3s ease-in-out infinite; }
+      .n2 { animation-delay: .8s } .n3 { animation-delay: 1.6s }
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="18" fill="url(#grid)"/>
+  <circle cx="1050" cy="60" r="260" fill="url(#glow2)"/>
+  <circle cx="120" cy="420" r="240" fill="url(#glow1)"/>
+
+  <!-- brand + headline -->
+  <g class="sans">
+    <text x="64" y="76" fill="#22d3ee" font-size="16" font-weight="600" letter-spacing="4">S&amp;S GLOBAL AI SOLUTIONS</text>
+    <text x="64" y="138" fill="#ffffff" font-size="50" font-weight="800">Grow Your Business with <tspan fill="#7dd3fc">AI</tspan></text>
+    <text x="64" y="180" fill="#cbd5e1" font-size="22" font-weight="500">Smart, affordable technology that saves time and brings more customers.</text>
+  </g>
+
+  <!-- service cards -->
+  <g class="sans">
+    <g transform="translate(64 214)">
+      <rect width="250" height="96" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#22d3ee" stroke-opacity="0.35"/>
+      <circle class="node" cx="30" cy="34" r="8" fill="#22d3ee"/>
+      <text x="50" y="40" fill="#ffffff" font-size="19" font-weight="700">AI Chatbots</text>
+      <text x="22" y="72" fill="#94a3b8" font-size="15">24/7 web &amp; WhatsApp support</text>
+    </g>
+    <g transform="translate(334 214)">
+      <rect width="250" height="96" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#7dd3fc" stroke-opacity="0.35"/>
+      <circle class="node n2" cx="30" cy="34" r="8" fill="#7dd3fc"/>
+      <text x="50" y="40" fill="#ffffff" font-size="19" font-weight="700">Websites &amp; Apps</text>
+      <text x="22" y="72" fill="#94a3b8" font-size="15">Fast, modern, mobile-ready</text>
+    </g>
+    <g transform="translate(604 214)">
+      <rect width="250" height="96" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#a78bfa" stroke-opacity="0.35"/>
+      <circle class="node n3" cx="30" cy="34" r="8" fill="#a78bfa"/>
+      <text x="50" y="40" fill="#ffffff" font-size="19" font-weight="700">Automation</text>
+      <text x="22" y="72" fill="#94a3b8" font-size="15">Cut manual work, save cost</text>
+    </g>
+  </g>
+
+  <!-- CTA -->
+  <g class="sans">
+    <rect x="64" y="338" width="250" height="48" rx="24" fill="url(#accent)"/>
+    <text x="189" y="369" text-anchor="middle" fill="#0b1020" font-size="18" font-weight="800">Get a Free Consultation</text>
+  </g>
+  <g class="mono" font-size="16" fill="#cbd5e1">
+    <text x="340" y="368"><tspan fill="#22d3ee">Website:</tspan> shivamguptadev.me</text>
+    <text x="640" y="368"><tspan fill="#a78bfa">Call:</tspan> +91 75709 50739</text>
+  </g>
+
+  <!-- emblem -->
+  <g transform="translate(1010 250)">
+    <circle r="96" fill="none" stroke="url(#accent)" stroke-width="2" stroke-opacity="0.6"/>
+    <circle r="72" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+    <text class="sans" y="14" text-anchor="middle" fill="#ffffff" font-size="44" font-weight="800">S&amp;S</text>
+    <text class="sans" y="44" text-anchor="middle" fill="#7dd3fc" font-size="13" font-weight="600" letter-spacing="3">GLOBAL AI</text>
+  </g>
+</svg>
