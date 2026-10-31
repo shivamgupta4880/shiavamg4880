@@ -1,0 +1,3 @@
+# Day Trader skill runtime files (watchlists, orders, logs); keep only the config
+trader/*
+!trader/config.json
